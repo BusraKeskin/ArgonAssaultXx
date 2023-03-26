@@ -451,7 +451,7 @@ Transform:
   - {fileID: 8088617923914590001}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 359.5122, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &879433969
 Animator:
   serializedVersion: 4
@@ -858,23 +858,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 405729415055200482, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
   m_PrefabInstance: {fileID: 8494347335940421587}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8091304057990954249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 408681662234856154, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
-  m_PrefabInstance: {fileID: 8494347335940421587}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8091304057990954250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8091304057990954249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67069dd729fb2914f81910a2ba110e7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8494347335940421587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -892,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 405729415055200482, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 405729415055200482, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -928,7 +911,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 408681662234856154, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
       propertyPath: m_Name
-      value: StarSparrow1
+      value: PlayerShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Id
+      value: 0cae8574-5402-441f-a0a5-0882b59614d3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[2].m_Path
+      value: <Keyboard>/s
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[3].m_Path
+      value: <Keyboard>/a
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[4].m_Path
+      value: <Keyboard>/d
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Path
+      value: <Gamepad>/leftStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: movement.m_SingletonActionBindings.Array.data[5].m_Action
+      value: Movement
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
