@@ -442,7 +442,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 879433967}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 470.8, y: 21.23, z: 328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -451,7 +451,7 @@ Transform:
   - {fileID: 8088617923914590001}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &879433969
 Animator:
   serializedVersion: 4
@@ -549,14 +549,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.15149991, y: -0.0016774532, z: -0.019260546, w: 0.98826814}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 17.8, z: -33.9}
   m_LocalScale: {x: 5, y: 2.157249, z: 4.8427606}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 879433968}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.42, y: -0.55, z: -2.317}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,6 +870,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405729415055200482, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 405729415055200482, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -924,6 +928,18 @@ PrefabInstance:
     - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
       propertyPath: speedControl
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: rollControlFactor
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: yawPositionFactor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
+      propertyPath: pitchControlFactor
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8091304057990954250, guid: 04420c9f82977a646a259c1a5ecefdcb, type: 3}
       propertyPath: movement.m_SingletonActionBindings.Array.size
