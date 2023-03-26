@@ -4,7 +4,10 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] InputAction movement;
-    [SerializeField] float offset = 0.1f;
+    [SerializeField] float speedControl = 5f;
+    [SerializeField] float xRange = 5f;
+    [SerializeField] float yRange = 5f;
+
     void Start()
     {
         
@@ -20,19 +23,21 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        
         float horizontalAxis = movement.ReadValue<Vector2>().x;
         float verticalAxis = movement.ReadValue<Vector2>().y;
 
-        ////float horizontalAxis = Input.GetAxis("Horizontal");
-        //Debug.Log(horizontalAxis);
-        ////float verticalAxis = Input.GetAxis("Vertical");
-        //Debug.Log(verticalAxis);
+        float offsetX = horizontalAxis * Time.deltaTime * speedControl;
+        float offsetY = verticalAxis * Time.deltaTime * speedControl;
 
-        transform.localPosition = new Vector3(
-            transform.localPosition.x + offset,
-            transform.localPosition.y,
-            transform.localPosition.z);
+        float newXPos = transform.localPosition.x + offsetX;
+        float newYPos = transform.localPosition.y + offsetY;
 
+        float clampedXPos = Mathf.Clamp(newXPos, -xRange, xRange);
+        float clampedYPos = Mathf.Clamp(newYPos, -yRange, yRange);
+
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+        
 
     }
 }
